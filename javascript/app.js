@@ -14,7 +14,7 @@ var articleElement=document.createElement('article');
 var ulElement = document.createElement('ul');
 articleElement.appendChild(ulElement);
     let name = document.createElement('h3');
-      
+    name.setAttribute("id", "location");
     name.textContent = locObj.nameObj;
 
     parent.appendChild(name);
