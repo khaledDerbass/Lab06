@@ -24,7 +24,7 @@ function showTable(locObj)
     }
     let liElement2 = document.createElement('li');
       
-    liElement2.textContent = 'Total : '+ locObj.total[x];
+    liElement2.textContent = 'Total : '+ locObj.total+' <br>';
 
     ulElement.appendChild(liElement2);
 }
