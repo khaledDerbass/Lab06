@@ -16,9 +16,25 @@ div#navbar ul li
 border-bottom: hidden;
  width: 100%; 
 }
+
 div#navbar ul li a {text-decoration: none;
 display: block; padding: 1em; text-align: center;text-shadow: .25;}
 
+
+
+div#salesTable
+{
+    border-left: hidden; border-right: hidden;
+position:relative; width: 100%;
+ 
+}
+div#salesTable ul { list-style-type:armenian ;}
+div#salesTable ul li
+{
+ border-top: hidden;
+border-bottom: hidden;
+ width: 100%; 
+}
 div#navbar2
 { 
     padding: 2%;

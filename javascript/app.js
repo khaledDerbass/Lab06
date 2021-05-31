@@ -15,20 +15,14 @@ function showTable(locObj)
     for (var x = 0; x < hours.length; x++) {
 
         var liElement = document.createElement('li');
-        var liElement2 = document.createElement('li');
       
-
+// list content
+        liElement.textContent = hours[x]+' : '+ locObj.CustEachHour[x]  ;
 
         // append
         ulElement.appendChild(liElement);
-        ulElement.appendChild(liElement2);
       
-
-        // list content
-        liElement.textContent = hours[x];
-        liElement2.textContent = locObj.CustEachHour[x];
-        
-
+    
     }
 
 }
@@ -40,6 +34,7 @@ let Seattle =
     minCust: 23,
     maxCust: 65,
     AvgCookie: 6.3,
+    total:0 ,
     CustEachHour: [],
     RandCust: function () {
         for (var i = 0; i < hours.length; i++) {
@@ -47,7 +42,7 @@ let Seattle =
             
         }
     }
-
+    
 }
 Seattle.RandCust();
 showTable(Seattle);
@@ -61,6 +56,7 @@ nameObj: "Tokyo",
  minCust:3,
  maxCust:24,
  AvgCookie: 1.2,
+ total:0 ,
  CustEachHour: [],
  RandCust: function () {
     for (var i = 0; i < hours.length; i++) {
@@ -77,6 +73,7 @@ nameObj: "Dubai",
  minCust:11,
  maxCust:38,
  AvgCookie: 3.7,
+ total:0 ,
  CustEachHour: [],
  RandCust: function () {
     for (var i = 0; i < hours.length; i++) {
@@ -94,6 +91,7 @@ nameObj: "Paris",
  minCust:20,
  maxCust:38,
  AvgCookie: 2.3,
+ total:0 ,
  CustEachHour: [],
  RandCust: function () {
     for (var i = 0; i < hours.length; i++) {
@@ -112,6 +110,7 @@ let lima={
  minCust:2,
  maxCust:16,
  AvgCookie: 4.6,
+ total: 0,
  CustEachHour: [],
  RandCust: function () {
     for (var i = 0; i < hours.length; i++) {
