@@ -30,7 +30,7 @@ articleElement.appendChild(ulElement);
 }
 
 
-var Seattle =
+let Seattle =
 {
     minCust: 23,
     maxCust: 65,
@@ -50,7 +50,7 @@ showTable(Seattle);
 
 
 
-var Tokyo={
+let Tokyo={
  minCust:3,
  maxCust:24,
  AvgCookie: 1.2,
@@ -65,7 +65,7 @@ var Tokyo={
 Tokyo.RandCust();
 showTable(Tokyo);
 
-var Dubai={
+let Dubai={
  minCust:11,
  maxCust:38,
  AvgCookie: 3.7,
@@ -81,7 +81,7 @@ var Dubai={
 Dubai.RandCust();
 showTable(Dubai);
 
-var Paris={
+let Paris={
  minCust:20,
  maxCust:38,
  AvgCookie: 2.3,
@@ -98,7 +98,7 @@ Paris.RandCust();
 showTable(Paris);
 
 
-var lima={
+let lima={
  minCust:2,
  maxCust:16,
  AvgCookie: 4.6,
