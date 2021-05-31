@@ -24,13 +24,16 @@ display: block; padding: 1em; text-align: center;text-shadow: .25;}
 
 div#salesTable
 {
-    border-left: hidden; border-right: hidden;
-position:relative; width: 100%;
+    padding: 2%;
+    position:relative;  
+    display: block;
+    margin-left: 10%;
  
 }
-div#salesTable ul { list-style-type:armenian ;}
+div#salesTable ul { list-style-type:circle ;}
 div#salesTable ul li
 {
+    padding: .25%;
  border-top: hidden;
 border-bottom: hidden;
  width: 100%; 
@@ -92,4 +95,13 @@ header {
 
   h3{
       text-align: center;
+      text-decoration: underline;
+      padding: 1%;
+  }
+
+  #totalCook
+  {
+    text-decoration:underline;
+    text-align: center;
+    padding: .5%;
   }

@@ -28,9 +28,10 @@ articleElement.appendChild(ulElement);
         // append
         ulElement.appendChild(liElement);
     }
-    let liElement2 = document.createElement('li');
-    ulElement.appendChild(liElement2);
-    liElement2.textContent = 'Total : '+ locObj.total;
+    let totalcook = document.createElement('li');
+    totalcook.setAttribute("id", "totalCook");
+    ulElement.appendChild(totalcook);
+    totalcook.textContent = 'Total : '+ locObj.total;
 
     parent.appendChild(articleElement);
 
@@ -70,6 +71,7 @@ nameObj: "Tokyo",
  RandCust: function () {
     for (var i = 0; i < hours.length; i++) {
         this.cookEachHour[i] = Math.floor(getRndInteger(this.minCust, this.maxCust)*this.AvgCookie);
+        this.total+=this.cookEachHour[i];
     }
 }
 }
@@ -87,7 +89,7 @@ nameObj: "Dubai",
  RandCust: function () {
     for (var i = 0; i < hours.length; i++) {
         this.cookEachHour[i] = Math.floor(getRndInteger(this.minCust, this.maxCust)*this.AvgCookie);
-        
+        this.total+=this.cookEachHour[i];
     }
 }
 }
@@ -105,7 +107,7 @@ nameObj: "Paris",
  RandCust: function () {
     for (var i = 0; i < hours.length; i++) {
         this.cookEachHour[i] = Math.floor(getRndInteger(this.minCust, this.maxCust)*this.AvgCookie);
-        
+        this.total+=this.cookEachHour[i];
     }
 }
 }
@@ -124,7 +126,7 @@ let lima={
  RandCust: function () {
     for (var i = 0; i < hours.length; i++) {
         this.cookEachHour[i] = Math.floor(getRndInteger(this.minCust, this.maxCust)*this.AvgCookie);
-        
+        this.total+=this.cookEachHour[i];
     }
 }
 }
