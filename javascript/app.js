@@ -12,19 +12,21 @@ parent.appendChild(articleElement);
 
 function showTable(locObj) 
 {
-    for (var x = 0; x < hours.length; x++) {
 
-        var liElement = document.createElement('li');
+    for (let x = 0; x < hours.length; x++) {
+
+        let liElement = document.createElement('li');
       
-// list content
-        liElement.textContent = hours[x]+' : '+ locObj.CustEachHour[x]  ;
+        liElement.textContent = hours[x]+' : '+locObj.cookEachHour[x];
 
         // append
         ulElement.appendChild(liElement);
-      
-    
     }
+    let liElement2 = document.createElement('li');
+      
+    liElement2.textContent = 'Total : '+ locObj.total[x];
 
+    ulElement.appendChild(liElement2);
 }
 
 
@@ -35,18 +37,18 @@ let Seattle =
     maxCust: 65,
     AvgCookie: 6.3,
     total:0 ,
-    CustEachHour: [],
+    cookEachHour: [],
     RandCust: function () {
         for (var i = 0; i < hours.length; i++) {
-            this.CustEachHour[i] = Math.floor(getRndInteger(this.minCust, this.maxCust)*this.AvgCookie);
-            
+            this.cookEachHour[i] = Math.floor(getRndInteger(this.minCust, this.maxCust)*this.AvgCookie);
+            this.total+=this.cookEachHour[i];
         }
     }
     
 }
 Seattle.RandCust();
 showTable(Seattle);
-//console.log(Seattle.CustEachHour);
+//console.log(Seattle.cookEachHour);
 
 
 
@@ -57,10 +59,10 @@ nameObj: "Tokyo",
  maxCust:24,
  AvgCookie: 1.2,
  total:0 ,
- CustEachHour: [],
+ cookEachHour: [],
  RandCust: function () {
     for (var i = 0; i < hours.length; i++) {
-        this.CustEachHour[i] = Math.floor(getRndInteger(this.minCust, this.maxCust)*this.AvgCookie);
+        this.cookEachHour[i] = Math.floor(getRndInteger(this.minCust, this.maxCust)*this.AvgCookie);
     }
 }
 }
@@ -74,10 +76,10 @@ nameObj: "Dubai",
  maxCust:38,
  AvgCookie: 3.7,
  total:0 ,
- CustEachHour: [],
+ cookEachHour: [],
  RandCust: function () {
     for (var i = 0; i < hours.length; i++) {
-        this.CustEachHour[i] = Math.floor(getRndInteger(this.minCust, this.maxCust)*this.AvgCookie);
+        this.cookEachHour[i] = Math.floor(getRndInteger(this.minCust, this.maxCust)*this.AvgCookie);
         
     }
 }
@@ -92,10 +94,10 @@ nameObj: "Paris",
  maxCust:38,
  AvgCookie: 2.3,
  total:0 ,
- CustEachHour: [],
+ cookEachHour: [],
  RandCust: function () {
     for (var i = 0; i < hours.length; i++) {
-        this.CustEachHour[i] = Math.floor(getRndInteger(this.minCust, this.maxCust)*this.AvgCookie);
+        this.cookEachHour[i] = Math.floor(getRndInteger(this.minCust, this.maxCust)*this.AvgCookie);
         
     }
 }
@@ -111,10 +113,10 @@ let lima={
  maxCust:16,
  AvgCookie: 4.6,
  total: 0,
- CustEachHour: [],
+ cookEachHour: [],
  RandCust: function () {
     for (var i = 0; i < hours.length; i++) {
-        this.CustEachHour[i] = Math.floor(getRndInteger(this.minCust, this.maxCust)*this.AvgCookie);
+        this.cookEachHour[i] = Math.floor(getRndInteger(this.minCust, this.maxCust)*this.AvgCookie);
         
     }
 }
